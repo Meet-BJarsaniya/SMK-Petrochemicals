@@ -9,5 +9,16 @@
   "name": "QC Warehouse button",
   "script": "frappe.ui.form.on('QC Warehouse Entry', {\n\trefresh(frm) {\n        frm.add_custom_button('Purchase Order', () => {\n            frappe.msgprint(\"You clicked button\");\n        }, 'Get Items From');\n\t}\n});",
   "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Purchase Order",
+  "enabled": 1,
+  "modified": "2024-06-10 19:03:45.320781",
+  "module": "SMK Petrochemicals",
+  "name": "pur ord naming series",
+  "script": "frappe.ui.form.on('Purchase Order', {\n\tcustom_purchase_type(frm) {\n\t    if (frm.is_new()){\n    \t    if (frm.doc.custom_purchase_type == \"Local\"){\n    \t        frm.set_value(\"naming_series\", \"SMK/LO/PO/.FY./.###\")\n    \t    }\n    \t    else if (frm.doc.custom_purchase_type == \"Import\"){\n    \t        frm.set_value(\"naming_series\", \"SMK/IM/PO/.FY./.###\")\n    \t    }\n\t    }\n\t}\n})",
+  "view": "Form"
  }
 ]
