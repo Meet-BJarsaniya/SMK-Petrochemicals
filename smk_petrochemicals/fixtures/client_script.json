@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "QC Warehouse Entry",
+  "enabled": 1,
+  "modified": "2024-06-10 17:58:12.290731",
+  "module": "SMK Petrochemicals",
+  "name": "QC Warehouse button",
+  "script": "frappe.ui.form.on('QC Warehouse Entry', {\n\trefresh(frm) {\n        frm.add_custom_button('Purchase Order', () => {\n            frappe.msgprint(\"You clicked button\");\n        }, 'Get Items From');\n\t}\n});",
+  "view": "Form"
+ }
+]
