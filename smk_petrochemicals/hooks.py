@@ -243,5 +243,3 @@ fixtures=[
     #     ]
     # ]},
 ]
-import frappe
-frappe.delete_doc("Workspace", "Purchase")
