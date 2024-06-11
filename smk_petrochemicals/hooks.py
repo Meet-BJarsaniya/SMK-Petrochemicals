@@ -235,11 +235,11 @@ fixtures=[
             ]
         ]
     ]},
-    {"dt": "Workspace", "filters":[
-        [
-            "name", "in",[
-                "Purchase"
-            ]
-        ]
-    ]},
+    # {"dt": "Workspace", "filters":[
+    #     [
+    #         "name", "in",[
+    #             "Purchase"
+    #         ]
+    #     ]
+    # ]},
 ]
